@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emprestimo</title>
+</head>
+<body>
+    <script>
+        let valorCasa = parseFloat(prompt("Digite o valor da casa:"));
+        let salarioComprador = parseFloat(prompt("Digite o salário do comprador:"));
+        let anosParaPagar = parseInt(prompt("Digite em quantos anos o comprador deseja pagar:"));
+        let prestacaoMensal = valorCasa / (anosParaPagar * 12);
+        let limitePrestacao = salarioComprador * 0.3;
+        if (prestacaoMensal <= limitePrestacao) {
+            alert("Empréstimo aprovado! A prestação mensal será de R$ " + prestacaoMensal.toFixed(2));
+        } else {
+            alert("Empréstimo negado! A prestação mensal de R$ " + prestacaoMensal.toFixed(2) + " excede 30% do salário do comprador.");
+        }
+    </script>
+</body>
+</html>

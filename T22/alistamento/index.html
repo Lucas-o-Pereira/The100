@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alistamento</title>
+</head>
+<body>
+    <script>
+        const anoNascimento = prompt("Digite o ano do seu nascimento:");
+        const anoAtual = new Date().getFullYear();
+        const idade = anoAtual - anoNascimento; 
+
+        if (idade < 18) {
+            const anosRestantes = 18 - idade;
+            const anoAlistamento = anoAtual + anosRestantes;
+            alert(`Ainda faltam ${anosRestantes} anos para o alistamento. Seu alistamento será em ${anoAlistamento}.`);
+        } else if (idade === 18) {
+            alert("Você deve se alistar este ano.");
+        } else {
+            const anosAtraso = idade - 18;
+            const anoAlistamento = anoAtual - anosAtraso;
+            alert(`Você já deveria ter se alistado há ${anosAtraso} anos. Seu alistamento foi em ${anoAlistamento}.`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorteio 1a5</title>
+</head>
+<body>
+    
+    <script>
+    // tentar acertar um número aleatório entre 1 e 5   
+    let numeroSorteado = Math.floor(Math.random() * 5) + 1;
+    let numeroUsuario = parseInt(prompt("Tente acertar o número sorteado entre 1 e 5:"));
+    if (numeroUsuario === numeroSorteado) {
+        alert("Parabéns! Você acertou o número " + numeroSorteado + "!");
+    } else {
+        alert("Que pena! O número sorteado era " + numeroSorteado + ". Tente novamente!");
+    } 
+    </script>
+</body>
+</html>

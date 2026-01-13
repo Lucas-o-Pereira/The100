@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Média</title>
+</head>
+<body>
+    <script>
+        prompt("Qual é o seu nome?");
+        let nota1 = parseFloat(prompt("Digite a primeira nota:"));
+        let nota2 = parseFloat(prompt("Digite a segunda nota:"));
+        let media = (nota1 + nota2) / 2;
+        let mediaGeral = 7.0;
+        alert('Sua média foi: ' + media)
+
+            if (media < mediaGeral) {
+                alert('Sua média foi: ' + media + ' você não teve um bom aproveitamento')
+            } else {
+                alert('Sua media foi: ' + media + ' você teve um bom aproveitamento')
+            }
+    </script>
+</body>
+</html>

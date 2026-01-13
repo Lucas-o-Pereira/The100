@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAJUSTE SALARIAL</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite o nome do funcionário:");
+        let salarioAtual = parseFloat(prompt("Digite o salário atual do funcionário:"));
+        let anosTrabalho = parseInt(prompt("Digite o número de anos trabalhados na empresa:")); 
+
+          if (anosTrabalho <= 3) {
+            let reajuste3 = salarioAtual * 0.03;
+            alert("O funcionário " + nome + " terá um reajuste de R$ " + reajuste3.toFixed(2) + ", totalizando um novo salário de R$ " + (salarioAtual + reajuste3).toFixed(2));
+          } else if (anosTrabalho >= 4 && anosTrabalho <= 10) {
+            let reajuste12 = salarioAtual * 0.125;
+            alert("O funcionário " + nome + " terá um reajuste de R$ " + reajuste12.toFixed(2) + ", totalizando um novo salário de R$ " + (salarioAtual + reajuste12).toFixed(2));
+          } else if (anosTrabalho > 10) { 
+            let reajuste20 = salarioAtual * 0.20;
+            alert("O funcionário " + nome + " terá um reajuste de R$ " + reajuste20.toFixed(2) + ", totalizando um novo salário de R$ " + (salarioAtual + reajuste20).toFixed(2));
+          }
+    </script>
+</body>
+</html>

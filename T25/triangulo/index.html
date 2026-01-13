@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIANGULO</title>
+</head>
+<body>
+    <script>
+        let ladoA = prompt("Digite o  segmentos de reta A:");
+        let ladoB = prompt("Digite o  segmentos de reta B:");
+        let ladoC = prompt("Digite o  segmentos de reta C:");
+
+            if (ladoA+ladoB > ladoC && ladoA+ladoC > ladoB && ladoB+ladoC > ladoA) {
+                alert("É possível formar um triângulo com os segmentos de reta informados.");
+            } else {
+                alert("Não é possível formar um triângulo com os segmentos de reta informados, pois a soma de dois lados deve ser maior que o terceiro lado.");
+            }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RADAR</title>
+  </head>
+  <body>
+    <script>
+     let velocidade = parseFloat(prompt("Qual a velocidade do veiculo em km/h?"));
+      if (velocidade > 80) {
+        let multa = (velocidade - 80) * 5;
+        alert("Você foi multado! O valor da multa é R$" + multa);
+      } else {
+        alert("Velocidade dentro do limite permitido.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Mulher</title>
+</head>
+<body>
+    <h1>Promoção exclusiva para o Dia da Mulher</h1>
+    <script>
+        let nome = prompt("Por favor, insira seu nome:");
+        let sexo = prompt("Por favor, insira seu sexo (M/F):").toUpperCase();
+        let compras = parseFloat(prompt("Por favor, insira o valor total das suas compras:"));
+        let descontoM = compras * 0.13;
+        let descontoH = compras * 0.05;
+
+        if (sexo === "F") {
+            let totalComDesconto = compras - descontoM;
+            alert("Olá " + nome + "! Como forma de celebrar o Dia da Mulher, você recebeu um desconto de 13% nas suas compras. O valor total com desconto é: R$ " + totalComDesconto.toFixed(2));
+        } else if (sexo === "M") {
+            let totalComDesconto = compras - descontoH;
+            alert("Olá " + nome + "! Em homenagem ao Dia da Mulher, você recebeu um desconto de 5% nas suas compras. O valor total com desconto é: R$ " + totalComDesconto.toFixed(2));
+        } else {
+            alert("Sexo inválido. Por favor, insira 'M' para masculino ou 'F' para feminino.");
+        }
+    </script>
+</body>
+</html>

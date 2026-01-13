@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formar Triângulo2</title>
+</head>
+<body>
+    <script>
+        let ladoA = parseFloat(prompt("Digite o valor do lado A:"));
+        let ladoB = parseFloat(prompt("Digite o valor do lado B:"));
+        let ladoC = parseFloat(prompt("Digite o valor do lado C:"));
+
+        if (ladoA == ladoB && ladoB == ladoC) {
+            alert("O triângulo é Equilátero.");
+        } else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
+            alert("O triângulo é Isósceles.");
+        } else {
+            alert("O triângulo é Escaleno.");
+        }
+    </script>
+</body>
+</html>

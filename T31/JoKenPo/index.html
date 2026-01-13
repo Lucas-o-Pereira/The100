@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JonKenPo</title>
+</head>
+<body>
+    <h1>Bem-vindo ao JonKenPo!</h1>
+    <p>Escolha sua jogada:</p>
+    <button onclick="jogar('pedra')">Pedra</button>
+    <button onclick="jogar('papel')">Papel</button>     
+    <button onclick="jogar('tesoura')">Tesoura</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function jogar(escolhaUsuario) {
+            const opcoes = ['pedra', 'papel', 'tesoura'];
+            const escolhaComputador = opcoes[Math.floor(Math.random() * opcoes.length)];
+            let resultado = '';
+
+            if (escolhaUsuario === escolhaComputador) {
+                resultado = 'Empate! Ambos escolheram ' + escolhaUsuario + '.';
+            } else if (
+                (escolhaUsuario === 'pedra' && escolhaComputador === 'tesoura') ||
+                (escolhaUsuario === 'papel' && escolhaComputador === 'pedra') ||
+                (escolhaUsuario === 'tesoura' && escolhaComputador === 'papel')
+            ) {
+                resultado = 'Você venceu! ' + escolhaUsuario + ' vence ' + escolhaComputador + '.';
+            } else {
+                resultado = 'Você perdeu! ' + escolhaComputador + ' vence ' + escolhaUsuario + '.';
+            }
+
+            document.getElementById('resultado').innerText = resultado;
+        }   
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cigarroNoDia = prompt("Quantos cigarros você fuma por dia?");
+        let anosFumando = prompt("Por quantos anos você tem fumado?");
+        //a cada cigarro, perde-se 10 minutos de vida
+        let minutosPerdidos = cigarroNoDia * anosFumando * 365 * 10;
+        let diasPerdidos = Math.floor(minutosPerdidos / 1440); //1440 minutos em um dia
+        alert("Você perdeu " + diasPerdidos + " dias de vida.");
+        console.log("Você perdeu " + diasPerdidos + " dias de vida.");
+    </script>
+</body>
+</html>

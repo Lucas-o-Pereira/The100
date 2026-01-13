@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA</title>
+</head>
+<body>
+    <script>
+        let largura = parseFloat(prompt("Digite a largura:"));
+        let comprimento = parseFloat(prompt("Digite o comprimento:"));
+        let area = largura * comprimento;
+        
+            if (area < 100) {
+                alert("Terreno popular");
+            } else if (area >= 100 && area <= 500) {
+                alert("Terreno master");
+            } else {
+                alert("Terreno vip");
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passagem</title>
+</head>
+<body>
+    <script>
+        let distancia = prompt("Digite a distância da viagem em km:");
+           
+            if (distancia <= 200) {
+                alert("O valor da passagem é R$ 0,50 por km.");
+                alert('A viagem de ' + distancia + ' km custará R$ ' + (distancia * 0.50).toFixed(2));
+            } else {
+                alert("O valor da passagem é R$ 0,45 por km.");
+                alert('A viagem de ' + distancia + ' km custará R$ ' + (distancia * 0.45).toFixed(2));
+            }
+    </script>
+</body>
+</html>
