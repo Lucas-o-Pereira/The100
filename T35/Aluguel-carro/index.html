@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluguel de carros</title>
+  </head>
+  <body>
+    <script>
+      alert("Bem-vindo ao sistema de aluguel de carros!");
+      let nome = prompt("Por favor, insira seu nome:");
+      let carro = prompt("Qual carro você alugou? Popular ou Luxo?");
+      let dias = prompt(
+        "Olá, " + nome + "! por quantos dias você alugou o " + carro + "?"
+      );
+      let kmPercorrido = prompt(
+        "Quantos quilômetros você percorreu com o carro?"
+      );
+      let custoTotal;
+      if (carro.toLowerCase() === "popular" && kmPercorrido <= 100) {
+        custoTotal = 90 * dias + 0.2 * kmPercorrido;
+        alert(
+          "O custo total do aluguel do carro é: R$ " + custoTotal.toFixed(2)
+        );
+      } else if (carro.toLowerCase() === "popular" && kmPercorrido > 100) {
+        custoTotal = 90 * dias + 0.1 * kmPercorrido;
+        alert(
+          "O custo total do aluguel do carro é: R$ " + custoTotal.toFixed(2)
+        );
+      } else if (carro.toLowerCase() === "luxo" && kmPercorrido <= 200) {
+        custoTotal = 150 * dias + 0.3 * kmPercorrido;
+        alert(
+          "O custo total do aluguel do carro é: R$ " + custoTotal.toFixed(2)
+        );
+      } else if (carro.toLowerCase() === "luxo" && kmPercorrido > 200) {
+        custoTotal = 150 * dias + 0.25 * kmPercorrido;
+        alert(
+          "O custo total do aluguel do carro é: R$ " + custoTotal.toFixed(2)
+        );
+      } else {
+        alert(
+          "Tipo de carro inválido. Por favor, escolha 'Popular' ou 'Luxo'."
+        );
+      }
+    </script>
+  </body>
+</html>
