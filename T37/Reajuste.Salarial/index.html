@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let salario = parseFloat(prompt("Olá, qual é o seu salario atual?"));
+      let genero = prompt("Qual o seu gênero? (M/F)");
+      let anosDeEmpresa = parseInt(
+        prompt("Há quantos anos você trabalha na empresa?"),
+      );
+
+      if (genero === "F" || genero === "f") {
+        if (anosDeEmpresa < 15) {
+          aumento = salario * 0.05;
+          alert("O seu aumento será de R$ " + aumento.toFixed(2));
+        } else if (anosDeEmpresa <= 20) {
+          aumento = salario * 0.12;
+          alert("O seu aumento será de R$ " + aumento.toFixed(2));
+        } else {
+          aumento = salario * 0.23;
+          alert("O seu aumento será de R$ " + aumento.toFixed(2));
+        }
+      } else if (genero === "M" || genero === "m") {
+        if (anosDeEmpresa < 20) {
+          aumento = salario * 0.03;
+          alert("O seu aumento será de R$ " + aumento.toFixed(2));
+        } else if (anosDeEmpresa <= 30) {
+          aumento = salario * 0.13;
+          alert("O seu aumento será de R$ " + aumento.toFixed(2));
+        } else {
+          aumento = salario * 0.25;
+          alert"("O seu aumento será de R$ " + aumento.toFixed(2));
+        }
+      } else {
+        alert("Gênero inválido. Por favor, insira M ou F.");
+      }
+    </script>
+  </body>
+</html>
