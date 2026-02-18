@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While 100 a 0</title>
+</head>
+<body>
+    <h1>Contagem Regressiva de 100 a 0</h1>
+    <ul>
+        <script>
+            let newParagraph = document.createElement("li");
+            let contador = 100;
+            while (contador >= 0) {
+                newParagraph.textContent = contador;
+                document.querySelector("ul").appendChild(newParagraph);
+                newParagraph = document.createElement("li");
+                contador--;
+            }
+        </script>
+    </ul>
+</body>
+</html>
