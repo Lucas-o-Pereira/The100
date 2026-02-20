@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contagem até X</title>
+  </head>
+  <body>
+    <script>
+      let x = parseInt(prompt("Digite um número para contar até ele:"));
+      document.write("<h1>Contagem até " + x + "</h1>");
+     
+      let contador = 0;
+      while (contador <= x) {
+        console.log(contador);
+        contador++;
+      }
+
+       let tcontador = 0;
+      while (tcontador <= x) {
+        document.write(tcontador + "<br>");
+        tcontador++;
+      }
+    </script>
+  </body>
+</html>
