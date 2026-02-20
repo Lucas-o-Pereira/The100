@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Divisível por 4</title>
+  </head>
+  <body>
+    <h1>Os números divisíveis por 4 estão em []</h1>
+    <script>
+      let i = 30;
+      while (i >= 1) {
+        if (i % 4 === 0) {
+          console.log(`[${i}]`);
+        } else {
+          console.log(i);
+        }
+        i--;
+      }
+
+      let j = 30;
+        do {
+            if (j % 4 === 0) {
+            document.write(`[${j}]<br>`);
+            } else {
+            document.write(j + "<br>");
+            }
+            j--;
+        } while (j >= 1);
+    </script>
+  </body>
+</html>
