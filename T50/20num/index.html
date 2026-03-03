@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sorteio</title>
+  </head>
+  <body>
+    <h1>while Sorteio de 20 números entre 0 e 10</h1>
+    <script>
+      let numerosSorteados = [];
+      let countAcimaDe5 = 0;
+      let countDivisiveisPor3 = 0;
+
+      while (numerosSorteados.length < 20) {
+        let numero = Math.floor(Math.random() * 11);
+        numerosSorteados.push(numero);
+
+        if (numero > 5) {
+          countAcimaDe5++;
+        }
+        if (numero % 3 === 0) {
+          countDivisiveisPor3++;
+        }
+      }
+
+      document.write(
+        "<p>Números sorteados: " + numerosSorteados.join(", ") + "</p>",
+      );
+      document.write(
+        "<p>Quantidade de números acima de 5: " + countAcimaDe5 + "</p>",
+      );
+      document.write(
+        "<p>Quantidade de números divisíveis por 3: " +
+          countDivisiveisPor3 +
+          "</p>",
+      );
+    </script>
+  </body>
+</html>
