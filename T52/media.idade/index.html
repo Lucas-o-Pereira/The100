@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media idade 10 pessoas</title>
+</head>
+<body>
+    <script>
+        /*a) Qual é a média de idade do grupo
+    b) Quantas pessoas tem mais de 18 anos
+    c) Quantas pessoas tem menos de 5 anos
+    d) Qual foi a maior idade lida*/
+         
+        let idades = [];
+        let somaIdades = 0;
+        let maioresDe18 = 0;
+        let menoresDe5 = 0;
+        let maiorIdade = 0;
+
+        while (idades.length < 10) {
+            let idade = parseInt(prompt("Digite a idade da pessoa " + (idades.length + 1) + ":"));
+            if (!isNaN(idade) && idade >= 0) {
+                idades.push(idade);
+                somaIdades += idade;
+
+                if (idade > 18) {
+                    maioresDe18++;
+                }
+                if (idade < 5) {
+                    menoresDe5++;
+                }
+                if (idade > maiorIdade) {
+                    maiorIdade = idade;
+                }
+            } else {
+                alert("Por favor, digite uma idade válida.");
+            }
+        }
+
+        let mediaIdade = somaIdades / idades.length;
+        alert("Média de idade: " + mediaIdade.toFixed(2) +
+              "\nPessoas com mais de 18 anos: " + maioresDe18 +
+              "\nPessoas com menos de 5 anos: " + menoresDe5 +
+              "\nMaior idade lida: " + maiorIdade);
+              // \n é usado para quebrar a linha no alert, deixando as informações mais organizadas.
+
+
+    </script>
+</body>
+</html>
