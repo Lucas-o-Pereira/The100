@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 Pessoas</title>
+  </head>
+  <body>
+    <script>
+      /*um programa que leia a idade e o sexo de 5 pessoas, mostrando no final:
+a) Quantos homens foram cadastrados
+b) Quantas mulheres foram cadastradas
+c) A média de idade do grupo
+d) A média de idade dos homens
+e) Quantas mulheres tem mais de 20 anos*/
+
+      let homens = 0;
+      let mulheres = 0;
+      let idadeTotal = 0;
+      let idadeHomens = 0;
+      let mulheresMais20 = 0;
+      while (homens + mulheres < 5) {
+        let idade = parseInt(prompt("Digite a idade da pessoa:"));
+        let sexo = prompt("Digite o sexo da pessoa (M/F):").toUpperCase();
+        if (sexo === "M") {
+          homens++;
+          idadeHomens += idade;
+        } else if (sexo === "F") {
+          mulheres++;
+          if (idade > 20) {
+            mulheresMais20++;
+          }
+        }
+        idadeTotal += idade;
+      }
+
+      let mediaIdadeGrupo = idadeTotal / 5;
+      let mediaIdadeHomens = homens > 0 ? idadeHomens / homens : 0;
+
+      document.write("<p>Quantidade de homens cadastrados: " + homens + "</p>");
+      document.write(
+        "<p>Quantidade de mulheres cadastradas: " + mulheres + "</p>",
+      );
+      document.write(
+        "<p>Média de idade do grupo: " + mediaIdadeGrupo.toFixed(2) + "</p>",
+      );
+      document.write(
+        "<p>Média de idade dos homens: " + mediaIdadeHomens.toFixed(2) + "</p>",
+      );
+      document.write(
+        "<p>Quantidade de mulheres com mais de 20 anos: " +
+          mulheresMais20 +
+          "</p>",
+      );
+    </script>
+  </body>
+</html>
