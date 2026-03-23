@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexo e Idade</title>
+</head>
+<body>
+    <script>
+        let maiorIdade = 0;
+        let contadorHomens = 0;
+        let idadeMulherMaisJovem = 0;
+        let somaIdadeHomens = 0;
+        let contadorPessoas = 0;
+
+        while (true) {
+            const sexo = prompt("Digite o sexo (M/F):").toUpperCase();
+            const idade = parseInt(prompt("Digite a idade:"));
+
+            if (isNaN(idade)) {
+                alert("Idade inválida. Tente novamente.");
+                continue;
+            }
+
+            if (idade > maiorIdade) {
+                maiorIdade = idade;
+            }
+
+            if (sexo === "M") {
+                contadorHomens++;
+                somaIdadeHomens += idade;
+            } else if (sexo === "F") {
+                if (idadeMulherMaisJovem === 0 || idade < idadeMulherMaisJovem) {
+                    idadeMulherMaisJovem = idade;
+                }
+            } else {
+                alert("Sexo inválido. Tente novamente.");
+                continue;
+            }
+
+            contadorPessoas++;
+
+            const continuar = prompt("Deseja continuar? (S/N)").toUpperCase();
+            if (continuar !== "S") {
+                break;
+            }
+        }
+
+        const mediaIdadeHomens = contadorHomens > 0 ? somaIdadeHomens / contadorHomens : 0;
+
+        console.log(`a) A maior idade lida é: ${maiorIdade}`);
+        console.log(`b) Quantos homens foram cadastrados: ${contadorHomens}`);
+        console.log(`c) A idade da mulher mais jovem é: ${idadeMulherMaisJovem}`);
+        console.log(`d) A média de idade entre os homens é: ${mediaIdadeHomens.toFixed(2)}`);       
+    </script>
+</body>
+</html>
