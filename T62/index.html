@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades</title>
+</head>
+<body>
+    <script>
+            let idade = 0;  
+            let contador = 0;
+            let somaIdades = 0;
+            let pessoas21OuMais = 0;
+            let continuar;
+
+            do {
+                idade = parseInt(prompt("Digite a idade:"));
+                somaIdades += idade;
+                contador++;
+
+                if (idade >= 21) {
+                    pessoas21OuMais++;
+                }
+
+                continuar = prompt("Deseja continuar? (s/n)").toLowerCase();
+            } while (continuar === 's');
+
+            const mediaIdades = somaIdades / contador;
+
+            console.log(`Quantidade de idades digitadas: ${contador}`);
+            console.log(`Média das idades: ${mediaIdades.toFixed(2)}`);
+            console.log(`Quantidade de pessoas com 21 anos ou mais: ${pessoas21OuMais}`);
+    </script>
+</body>
+</html>
