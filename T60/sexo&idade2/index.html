@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sexo&idade 2</title>
+</head>
+<body>
+    <script>
+          let nomeMaisVelha = "";
+          let mulherMaisJovem = "";
+          let somaIdades = 0;
+          let totalPessoas = 0;
+          let homensMais30 = 0;
+          let mulheresMenos18 = 0;
+            
+          while (true) {
+            let nome = prompt("Digite o nome da pessoa:");
+            let idade = parseInt(prompt("Digite a idade da pessoa:"));
+            let sexo = prompt("Digite o sexo da pessoa (M/F):").toUpperCase();
+            
+            if (totalPessoas === 0 || idade > parseInt(nomeMaisVelha.split(",")[1])) {
+              nomeMaisVelha = `${nome},${idade}`;
+            }
+            
+            if (sexo === "F") {
+              if (mulherMaisJovem === "" || idade < parseInt(mulherMaisJovem.split(",")[1])) {
+                mulherMaisJovem = `${nome},${idade}`;
+              }
+              if (idade < 18) {
+                mulheresMenos18++;
+              }
+            } else if (sexo === "M" && idade > 30) {
+              homensMais30++;
+            }
+            
+            somaIdades += idade;
+            totalPessoas++;
+            
+            let continuar = prompt("Deseja continuar? (S/N)").toUpperCase();
+            if (continuar !== "S") {
+              break;
+            }
+          }
+
+            let mediaIdade = somaIdades / totalPessoas;
+            console.log(`a) O nome da pessoa mais velha: ${nomeMaisVelha.split(",")[0]}`);
+            console.log(`b) O nome da mulher mais jovem: ${mulherMaisJovem.split(",")[0]}`);
+            console.log(`c) A média de idade do grupo: ${mediaIdade.toFixed(2)}`);
+            console.log(`d) Quantos homens tem mais de 30 anos: ${homensMais30}`);
+            console.log(`e) Quantas mulheres tem menos de 18 anos: ${mulheresMenos18}`);
+    </script>
+</body>
+</html>
