@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números</title>
+  </head>
+  <body>
+    <script>
+      let soma = 0;
+      let menorValor = null;
+      let quantidadeValores = 0;
+      let quantidadePares = 0;
+
+      do {
+        let numero = parseFloat(prompt("Digite um número:"));
+
+        if (isNaN(numero)) {
+          alert("Por favor, digite um número válido.");
+          continue;
+        }
+
+        soma += numero;
+        quantidadeValores++;
+
+        if (menorValor === null || numero < menorValor) {
+          menorValor = numero;
+        }
+
+        if (numero % 2 === 0) {
+          quantidadePares++;
+        }
+      } while (confirm("Deseja continuar?"));
+
+      let media = quantidadeValores > 0 ? soma / quantidadeValores : 0;
+
+      alert(
+        `Somatório: ${soma}\nMenor valor: ${menorValor}\nMédia: ${media}\nQuantidade de valores pares: ${quantidadePares}`,
+      );
+    </script>
+  </body>
+</html>
