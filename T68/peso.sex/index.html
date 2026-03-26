@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso & Gênero</title>
+</head>
+<body>
+    <script>
+        /* Crie um programa que leia sexo e peso de 8 pessoas, usando a estrutura
+“para”. No final, mostre na tela:
+a) Quantas mulheres foram cadastradas
+b) Quantos homens pesam mais de 100Kg
+c) A média de peso entre as mulheres
+d) O maior peso entre os homens*/ 
+        let mulheres = 0;
+        let homensPesados = 0;
+        let pesoMulheres = 0;
+        let maiorPesoHomens = 0;
+        alert("Bem-vindo! Vamos cadastrar o sexo e peso de 8 pessoas.");
+        for (let i = 0; i < 8; i++) {
+            let sexo = prompt("Digite o sexo (M/F):").toUpperCase();
+            let peso = parseFloat(prompt("Digite o peso:"));
+
+            if (sexo === "F") {
+                mulheres++;
+                pesoMulheres += peso;
+            } else if (sexo === "M") {
+                if (peso > 100) {
+                    homensPesados++;
+                }
+                if (peso > maiorPesoHomens) {
+                    maiorPesoHomens = peso;
+                }
+            }
+        }
+
+        let mediaPesoMulheres = mulheres > 0 ? (pesoMulheres / mulheres).toFixed(2) : 0;
+
+        console.log(`a) Quantidade de mulheres cadastradas: ${mulheres}`);
+        console.log(`b) Quantidade de homens que pesam mais de 100Kg: ${homensPesados}`);
+        console.log(`c) Média de peso entre as mulheres: ${mediaPesoMulheres} Kg`);
+        console.log(`d) Maior peso entre os homens: ${maiorPesoHomens} Kg`);
+    </script>
+</body>
+</html>
