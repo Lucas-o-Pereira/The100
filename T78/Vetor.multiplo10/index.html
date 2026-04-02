@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor Múltiplos de 10</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 15; i++) {
+            let numero = parseInt(prompt(`Digite o ${i + 1}º número:`));
+            numeros.push(numero);
+        }
+
+        console.log("Vetor completo:", numeros);
+
+        console.log("Posições dos múltiplos de 10:");
+        for (let j = 0; j < numeros.length; j++) {
+            if (numeros[j] % 10 === 0) {
+                console.log(`Número ${numeros[j]} na posição ${j}`);
+            }
+        }
+    </script>
+</body>
+</html>
