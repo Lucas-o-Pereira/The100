@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor par</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 10; i++) {
+            let numero = parseInt(prompt("Digite um número inteiro:"));
+            numeros.push(numero);
+        }
+
+        console.log("Números pares digitados:");
+        for (let i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 === 0) {
+                console.log(`Número: ${numeros[i]}, Posição: ${i}`);
+            }
+        }
+    </script>
+</body>
+</html>
