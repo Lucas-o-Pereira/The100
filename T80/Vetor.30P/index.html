@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vetor 30</title>
+</head>
+<body>
+    <script>
+        const vetor = [];
+        const tamanhoVetor = 30;
+        const limiteSorteio = 15;
+
+        // Preenchendo o vetor com números aleatórios entre 1 e 15
+        for (let i = 0; i < tamanhoVetor; i++) {
+            const numeroSorteado = Math.floor(Math.random() * limiteSorteio) + 1;
+            vetor.push(numeroSorteado);
+        }
+
+        console.log("Vetor sorteado:", vetor);
+
+        // Solicitando ao usuário que digite um número (chave)
+        const chave = parseInt(prompt("Digite um número entre 1 e 15 para buscar no vetor:"));
+
+        // Verificando as posições onde a chave foi encontrada e contando as ocorrências
+        const posicoesEncontradas = [];
+        let contadorOcorrencias = 0;
+
+        for (let i = 0; i < vetor.length; i++) {
+            if (vetor[i] === chave) {
+                posicoesEncontradas.push(i);
+                contadorOcorrencias++;
+            }
+        }
+
+        // Exibindo os resultados
+        if (contadorOcorrencias > 0) {
+            console.log(`A chave ${chave} foi encontrada nas posições: ${posicoesEncontradas.join(", ")}`);
+            console.log(`A chave ${chave} foi sorteada ${contadorOcorrencias} vezes.`);
+        } else {
+            console.log(`A chave ${chave} não foi encontrada no vetor.`);
+        }
+    </script>
+</body>
+</html>
