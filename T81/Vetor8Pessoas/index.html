@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let idades = [];
+      let somaIdades = 0;
+      let maiorIdade = 0;
+      let posicoesMaiores25 = [];
+      let posicoesMaiorIdade = [];
+
+      for (let i = 0; i < 8; i++) {
+        let idade = parseInt(prompt(`Digite a idade da pessoa ${i + 1}:`));
+        idades.push(idade);
+        somaIdades += idade;
+
+        if (idade > 25) {
+          posicoesMaiores25.push(i);
+        }
+
+        if (idade > maiorIdade) {
+          maiorIdade = idade;
+          posicoesMaiorIdade = [i];
+        } else if (idade === maiorIdade) {
+          posicoesMaiorIdade.push(i);
+        }
+      }
+
+      let mediaIdades = somaIdades / idades.length;
+
+      console.log(`Média de idade: ${mediaIdades}`);
+      console.log(
+        `Posições com pessoas maiores de 25 anos: ${posicoesMaiores25.join(", ")}`,
+      );
+      console.log(`Maior idade digitada: ${maiorIdade}`);
+      console.log(
+        `Posições com a maior idade: ${posicoesMaiorIdade.join(", ")}`,
+      );
+    </script>
+  </body>
+</html>
