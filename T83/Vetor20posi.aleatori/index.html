@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor de 20 posições aleatórias</title>
+</head>
+<body>
+    <script>
+        // Gerar vetor de 20 posições com números aleatórios entre 0 e 99    
+        const vetor = [];
+        for (let i = 0; i < 20; i++) {
+            vetor.push(Math.floor(Math.random() * 100));
+        }
+
+        // Mostrar os números gerados
+        console.log("Números gerados:");
+        console.log(vetor);
+
+        // Ordenar o vetor em ordem crescente
+        vetor.sort((a, b) => a - b);
+
+        // Mostrar os valores ordenados
+        console.log("Números ordenados:");
+        console.log(vetor);
+    </script>
+</body>
+</html>
