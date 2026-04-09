@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4</title>
+</head>
+<body>
+    <script>
+function Gerador(texto, borda, linhas) {
+    let borda1 = "+-------=======------+";
+    let borda2 = "~~~~~~~~:::::::~~~~~~~";
+    let borda3 = "<<<<<<<<------->>>>>>>";
+
+    switch (borda) {
+        case 1:
+            console.log(borda1);
+            break;
+        case 2:
+            console.log(borda2);
+            break;
+        case 3:
+            console.log(borda3);
+            break;
+        default:
+            console.log("Borda inválida");
+    }
+
+    for (let i = 0; i < linhas; i++) {
+        console.log(texto);
+    }
+
+    switch (borda) {
+        case 1:
+            console.log(borda1);
+            break;
+        case 2:
+            console.log(borda2);
+            break;
+        case 3:
+            console.log(borda3);
+            break;
+        default:
+            console.log("Borda inválida");
+    }
+}
+
+Gerador("Gerador", 2, 3);
+
+    </script>
+</body>
+</html>
