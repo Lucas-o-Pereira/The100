@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nomes = [];
+      let sexos = [];
+      let salarios = [];
+
+      for (let i = 0; i < 5; i++) {
+        nomes.push(prompt("Digite o nome do funcionário:"));
+        sexos.push(prompt("Digite o sexo do funcionário (M/F):"));
+        salarios.push(parseFloat(prompt("Digite o salário do funcionário:")));
+      }
+
+      console.log("Funcionárias mulheres que ganham mais de R$5 mil:");
+      for (let i = 0; i < 5; i++) {
+        if (sexos[i] === "F" && salarios[i] > 5000) {
+          console.log(
+            `Nome: ${nomes[i]}, Salário: R$${salarios[i].toFixed(2)}`,
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
