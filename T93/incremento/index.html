@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Incremento</title>
+</head>
+<body>
+    <script>
+        function Contador(inicio, fim, incremento) {
+            for (let i = inicio; i <= fim; i += incremento) {
+                console.log(i);
+            }
+        }
+
+        const inicio = parseInt(prompt("Digite o início da contagem:"));
+        const fim = parseInt(prompt("Digite o fim da contagem:"));
+        const incremento = parseInt(prompt("Digite o incremento da contagem:"));
+
+        Contador(inicio, fim, incremento);
+    </script>
+</body>
+</html>
