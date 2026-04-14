@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maior(a, b, c) {
+            if (a === b && b === c) {
+                return "Os três valores são iguais.";
+            } else {
+                return Math.max(a, b, c);
+            }
+        }
+          let valor1 = parseFloat(prompt("Digite o primeiro valor:"));
+          let valor2 = parseFloat(prompt("Digite o segundo valor:")); 
+          let valor3 = parseFloat(prompt("Digite o terceiro valor:"));
+          console.log(maior(valor1, valor2, valor3));
+    </script>
+</body>
+</html>
