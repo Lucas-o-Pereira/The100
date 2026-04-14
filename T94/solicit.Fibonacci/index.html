@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Fibonacci</title>
+</head>
+<body>
+    <script>
+        function Fibonacci(n) {
+            let a = 0, b = 1, temp;
+            for (let i = 0; i < n; i++) {
+                console.log(a);
+                temp = a;
+                a = b;
+                b = temp + b;
+            }
+        }
+
+        Fibonacci(11);
+    </script>
+</body>
+</html>
