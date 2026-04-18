@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exponenciação</title>
+  </head>
+  <body>
+    <script>
+      function Potencia(base, expoente) {
+        return Math.pow(base, expoente);
+      }
+
+      const base = parseFloat(prompt("Digite a base:"));
+      const expoente = parseFloat(prompt("Digite o expoente:"));
+      const resultado = Potencia(base, expoente);
+      alert(`O resultado de ${base} elevado a ${expoente} é: ${resultado}`);
+      console.log(`O resultado de ${base} elevado a ${expoente} é: ${resultado}`);
+    </script>
+  </body>
+</html>
