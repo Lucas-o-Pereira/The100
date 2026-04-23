@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Média</title>
+  </head>
+  <body>
+    <script>
+      function Media(nota1, nota2) {
+        return (nota1 + nota2) / 2;
+      }
+
+      function Situacao(media) {
+        if (media >= 7) {
+          return "APROVADO";
+        } else if (media >= 5) {
+          return "RECUPERAÇÃO";
+        } else {
+          return "REPROVADO";
+        }
+      }
+
+      const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+      const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+      const media = Media(nota1, nota2);
+      const situacao = Situacao(media);
+
+      console.log(`Média: ${media}`);
+      console.log(`Situação: ${situacao}`);
+      alert(`Média: ${media}\nSituação: ${situacao}`);
+    </script>
+  </body>
+</html>
